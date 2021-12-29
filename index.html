@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="prediction">Loading . . .</h1>
+
+<button onclick="reroll()">Get a new prediction</button>
+
+<script>
+function banlist() {
+        var cards = [
+            "Astrograph",
+            "Electrumite",
+            "Pot of Greed",
+            "Sangan",
+            "Every card printed in Starter Deck Joey",
+            "Jerry Beans Man",
+            "MY PERFECTLY ULTIMATE GREAT MOTH",
+            "Man-Eater Bug",
+            "Trishula",
+            "Ojama Blue",
+            "Raigeki",
+            "Elemental HERO Stratos",
+            "Winda",
+            "Dark Law",
+            "Gate Guardian",
+            "Every card, except \"Frog the Jam\"",
+            "Literally every single card ever",
+            "Ratpier",
+            "Pot of Prosperity",
+            "Maxx C",
+            "Heavy Storm",
+            "Painful Choice",
+            "Triple Tactics Talent",
+            "Forbidden Droplet",
+            "DPE",
+            "Red-Eyes Dark Dragoon",
+            "AA Zeus",
+            "Artifact Scythe",
+            "Droll & Lock Bird",
+            "Archnemeses Protos",
+            "The Wind Barrier Statue",
+            "FA Auto Navigator",
+            "Verte Anaconda",
+            "Needlefiber",
+            "Firewall",
+            "Literally all commons",
+            "Tri-Brigade Revolt",
+            "Harpie's Feather Duster"
+        ];
+        var reasons = [
+            "because I hate Pends and Links",
+            "because Konami",
+            "to balance out Hungry Burger OTK",
+            "because it's inherently unfair",
+            "to sell the Ice Barriers structure deck",
+            "because of the potential interactions with Jerry Beans Man",
+            "because Konami learned their lesson with Dragon Rulers",
+            "because it's stupid OP",
+            "because it was degenerate and allowed too many FTKs",
+            "because Jesse Kotton topped with it",
+            "because it just got reprinted",
+            "because Konami hates fun",
+            "to push the Pendulum agenda",
+            "because Konami hates Pendulums",
+            "because.",
+            "in case Konami wants to unban more dragon rulers",
+            "for \"balance\"",
+            "because $$$",
+            "to balance the secondary market",
+            "because it literally gave people cancer",
+            "so the player base would stop complaining",
+            "because #YOLO",
+            "because why not?",
+            "to encourage format diversity",
+            "to balance the meta",
+            "because Trump complained about it",
+            "because synchros ruined the game",
+            "because they didn't want to recycle the same list",
+            "to spice up the meta",
+            "because it's the reason Firewall got errata'd",
+            "because it's broken with Fusion Destiny",
+            "because Dragoon is the best Verte target",
+            "because there's too many locks in the game",
+            "because muh backrow decks need support",
+            "because it's too monkeflip",
+            "because it's gonna break Tri-Brigade",
+            "because it makes me butthurt",
+            "because it would make my Table 500 deck better"
+        ];
+
+        var random_card = cards[Math.floor(Math.random() * cards.length)];
+        var random_amt = Math.floor((Math.random() * 100) % 4);
+        var random_reason = reasons[Math.floor(Math.random() * reasons.length)];
+
+        var prediction = random_card.concat(" to ", random_amt, " ", random_reason);
+
+        return prediction;
+}
+function reroll() {
+  document.getElementById("prediction").innerHTML = banlist();
+}
+document.getElementById("prediction").innerHTML = banlist();
+</script>
+
+</body>
+</html>
